@@ -1,0 +1,23 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-dark">
+    <a class="navbar-brand text-light" href="/students">Students service</a>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+                <a class="nav-link text-light" href="/students">Students<span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link text-light" href="/courses">Courses</a>
+            </li>
+        </ul>
+        <a class="nav-link text-light" *ngIf="isLoggedOut()" href="/login">Log in</a>
+        <a class="nav-link text-light"(click)="logOut()" *ngIf="isLoggedIn()" href="/login">Log out</a>
+    </div>
+</nav>
+<div class="container-fluid">
+    <div class="jumbotron bg-primary text-light">
+        <h1 class="display-3" class="d-flex justify-content-center align-items-center">Student Service</h1>
+    </div>
+</div>
+<div class="container bg-light">
+    <router-outlet></router-outlet>
+</div>

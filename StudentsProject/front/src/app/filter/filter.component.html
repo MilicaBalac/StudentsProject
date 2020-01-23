@@ -1,0 +1,16 @@
+    <form class="form inline">
+      <div class="form-group">
+          <label for="filter-grade">Average grade</label>
+          <input class="form-control" name="filter-grade" type="number" [(ngModel)] = "averageGrade"/>
+          <button type="button" (click)="filterByAvgGradeGraterThan()" class="btn btn-primary">Show</button>
+      </div>
+    </form>
+      <div class="btn-group-vertical">
+        <button type="button" (click)="filterByMaxGrade()" class="btn btn-secondary">Student with highest grade</button>
+        <button type="button" (click)="sortByAvgGrade(orderTypes.asc)" class="btn btn-secondary">Sort by average grade (asc)</button>
+        <button type="button" (click)="sortByAvgGrade(orderTypes.desc)" class="btn btn-secondary">Sort by average grade (desc)</button>
+        <button type="button" (click)="filterByNextYearCondition()" class="btn btn-secondary">Show students for next year</button>
+        <button type="button" (click)="reset()" class="btn btn-danger">Poništi filtere</button>
+      </div>
+
+  

@@ -1,0 +1,16 @@
+<form (ngSubmit)="saveStudent()" class="mb-5">
+  <h2>Add student</h2>
+    <div class="form-group" >
+      <label for="student-carNumber">Card number</label>
+      <input type="text" class="form-control" name="student-carNumber" id="student-carNumber" [(ngModel)]="studentToAdd.cardNumber" >
+    </div>
+    <div class="form-group">
+      <label for="student-firstName">First name</label>
+      <input type="text" name="student-firstName" class="form-control" id="student-firstName" [(ngModel)]="studentToAdd.firstName">
+    </div>
+    <div class="form-group">
+        <label for="student-lastName">Last name</label>
+        <input type="text" name="student-lastName" class="form-control" id="student-lastName" [(ngModel)]="studentToAdd.lastName">
+    </div>
+    <input type="submit" class="btn btn-primary" value="Save"/>
+  </form>

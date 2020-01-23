@@ -1,0 +1,16 @@
+<form (ngSubmit)="editStudent()">
+    <h2>Edit student</h2>
+    <div class="form-group" >
+      <label for="student-carNumber">Card number</label>
+      <input type="text" class="form-control" name="student-carNumber" id="student-carNumber" disabled placeholder="Indeks" [(ngModel)]="studentToEdit.cardNumber" >
+    </div>
+    <div class="form-group">
+      <label for="student-firstName">First name</label>
+      <input type="text" name="student-firstName" class="form-control" id="student-firstName" [(ngModel)]="studentToEdit.firstName">
+    </div>
+    <div class="form-group">
+        <label for="student-lastName">Last name</label>
+        <input type="text" name="student-lastName" class="form-control" id="student-lastName" [(ngModel)]="studentToEdit.lastName">
+    </div>
+    <input type="submit" class="btn btn-primary" value="Save"/>
+  </form>

@@ -1,0 +1,10 @@
+        <td>{{student.id}}</td>
+        <td>{{student.firstName}}</td>
+        <td>{{student.lastName}}</td>
+        <td>{{student.cardNumber}}</td>
+        <td > 
+            <button type="button" class="btn btn-danger" *ngIf="isAdministrator" [disabled]="!isDeletingAllowed()" (click)="deleteStudent()"title="Moguce je obrisati studenta koji nema ispite!">Delete</button> 
+            <button type="button" class="btn btn-secondary" *ngIf="isAdministrator" (click)="editStudent()">Edit</button>
+        </td>
+        <td><a [routerLink]="['/students',student.id]" class="badge badge-info">Info</a></td>
+ 

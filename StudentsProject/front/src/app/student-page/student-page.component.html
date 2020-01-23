@@ -1,0 +1,21 @@
+
+<app-search class="col-8" (setSearchTerm)="search($event)"></app-search>
+<div class="row">
+    <div class="col-8">
+        <app-student-list [students]="students" [isAdministrator]="isAdministrator" (studentDeleted)="deleteStudent($event)" (markStudentForEditing)="setActiveStudent($event)"></app-student-list>
+    </div>
+    <div class="col-4">
+        <app-filter
+                (filteredByAvgGrade)="filterByAvgGrade($event)"
+                (filteredByMaxGrade)="filterByMaxGrade()"
+                (filteredByNextYearCondition)="filterByNextYearCondition()"
+                (sortedByAvgGrade)="sortByGrade($event)"
+                (resetFilter)="loadData()">
+            </app-filter>
+    <!-- </div>
+</div>
+<hr>
+<div class="row"> -->
+    <app-add-student  *ngIf="isAdministrator" (addedStudent)="addStudent($event)"></app-add-student>
+    <app-edit-student  *ngIf="isAdministrator" [studentToEdit]="activeStudent" (editedStudent)= "editStudent($event)"></app-edit-student>
+</div>

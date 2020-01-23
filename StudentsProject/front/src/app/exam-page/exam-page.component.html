@@ -1,0 +1,14 @@
+<div>
+    <ul>
+        <li *ngFor="let exam of exams">
+            <div>Predmet: {{exam.course.name}}</div>
+            <div>Espb bodovi: {{exam.course.espb}}</div>
+            <div>Ocena: {{exam.grade}}</div>
+        </li>
+    </ul>
+</div>
+<app-add-exam 
+[isDataFetched]="isDataFetched"
+[subjects]="subjects"
+(examAdded)="addExam($event)">
+</app-add-exam>

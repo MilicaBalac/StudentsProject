@@ -1,0 +1,16 @@
+<table class="table table-striped">
+    <thead>
+      <tr>
+        <th >Student ID</th> 
+        <th >First name</th>
+        <th>Last name</th>
+        <th>Card Number</th>
+        <th>Actions</th>
+        <th >Info</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let student of students;" app-student-list-item [student]="student" [isAdministrator]="isAdministrator" (studentDeleted)="deleteStudent($event)" (markStudentForEditing)="editStudent($event)" >
+        </tr>
+    </tbody>
+</table>
